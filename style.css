@@ -1,0 +1,51 @@
+* {
+    box-sizing: border-box;
+  }
+
+  .header { grid-area: header; }
+  .image { grid-area: image; }
+  .ingredients { grid-area: ingredients; }
+  .nutrivalues { grid-area: nutrivalues; }
+  .cooking-summary { grid-area: cooking-summary; }
+  .method { grid-area: method; }
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+  'image header header header'
+  'image cooking-summary cooking-summary cooking-summary'
+  'ingredients method method method'
+  'nutrivalues method method method';
+  border-radius: 10px;
+  border: 1px solid #cFe2ce;
+  grid-gap: 10px;
+  padding: 10px;
+  margin: 50px 200px;
+}
+
+.header {
+    font-family: 'Water Brush';
+    font-size: 32px;
+    color: #4c6a4b;
+    font-weight: bold;
+    text-align: center;
+    word-spacing: 32px;
+}
+
+.image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;   
+}
+
+ img {
+    width: 350px;
+    border-radius: 10px;
+}
+
+.ingredients {
+    background-color:#95c476;
+    border-radius: 10px;
+    padding: 0 15px;
+}
