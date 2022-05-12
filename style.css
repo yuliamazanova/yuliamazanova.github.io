@@ -1,25 +1,35 @@
 * {
     box-sizing: border-box;
+    margin: 0px;
+    padding: 0px
   }
-
-  .header { grid-area: header; }
-  .image { grid-area: image; }
-  .ingredients { grid-area: ingredients; }
-  .nutrivalues { grid-area: nutrivalues; }
-  .cooking-summary { grid-area: cooking-summary; }
-  .method { grid-area: method; }
 
 .grid-container {
   display: grid;
-  grid-template-areas:
-  'image header header header'
-  'image cooking-summary cooking-summary cooking-summary'
-  'ingredients method method method'
-  'nutrivalues method method method';
   border-radius: 10px;
   border: 1px solid #cFe2ce;
   grid-gap: 10px;
   padding: 10px;
+}
+
+@media (min-width: 40em) {
+    .grid-container {
+        
+        grid-template-columns: 300px auto;
+        grid-template-areas:
+        "image header"
+        "image cooking-summary"
+        "image method"
+        "ingredients method"
+        "nutrivalues method";
+        }
+    
+    .header { grid-area: header; }
+    .image { grid-area: image; }
+    .ingredients { grid-area: ingredients; }
+    .nutrivalues { grid-area: nutrivalues; }
+    .cooking-summary { grid-area: cooking-summary; }
+    .method { grid-area: method; }
 }
 
 .header {
@@ -44,9 +54,12 @@
 }
 
 .ingredients {
+    display: flex;
+    justify-content: left;
+    padding: 25px;
+    font-size: 18px;
     background-color:#95c476;
-    border-radius: 10px;
-    padding: 0 15px;
+    border-radius: 10px;    
 }
 
 .ingredients ul {
@@ -62,16 +75,16 @@
 
 .nutrivalues {
     display: flex;
-    align-items: center;
     justify-content: center;
-    font-size: 18px;
-    border: 1px solid #4c6a4b;
-    border-radius: 10px;
-    padding: 15px 0;
+    padding: 5px;
+    font-size: 18px; 
 }
 
 .nutrivalues table {
-    border-collapse: collapse;
+    border-spacing: 0;
+    border: 1px solid #4c6a4b;
+    border-radius: 10px;
+    padding: 10px; 
   }
 
 .nutrivalues tbody tr:nth-child(odd) {
@@ -98,7 +111,7 @@
 }
 
 .method {
-    padding: 0 15px;
+    padding: 25px;
     background-color:#f0f0f0;
     border-radius: 10px;
     font-size: 20px;
@@ -112,6 +125,7 @@
     font-family: 'Water Brush';
     font-size: 32px;
     font-weight: bold;
+    text-align: center;
 }
 
 .method span {
