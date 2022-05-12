@@ -14,14 +14,13 @@
 
 @media (min-width: 40em) {
     .grid-container {
-    margin: 50px 200px;
+    margin: 50px 250px;
     grid-template-columns: 300px auto;
     grid-template-areas:
-        "image header"
-        "image cooking-summary"
-        "image method"
-        "ingredients method"
-        "nutrivalues method";
+        "image header header"
+        "image cooking-summary cooking-summary"
+        "nutrivalues ingredients ingredients"
+        "method method method";
     }
     
     .header { grid-area: header; }
@@ -55,8 +54,8 @@
 
 .ingredients {
     display: flex;
-    justify-content: left;
-    padding: 5px;
+    align-items: center;
+    justify-content: center;
     font-size: 18px;
     background-color:#95c476;
     border-radius: 10px;    
@@ -64,7 +63,6 @@
 
 .ingredients ul {
     list-style-type: none;
-    font-size: 18px;
 }
 
 .ingredients p {
@@ -107,7 +105,6 @@
     text-align: center;
     font-size: 14px;
     color: #6B9D4A;
-    word-spacing: 6px;
 }
 
 .method {
@@ -125,7 +122,7 @@
     font-family: 'Water Brush';
     font-size: 32px;
     font-weight: bold;
-    text-align: center;
+    text-align: left;
 }
 
 .method span {
