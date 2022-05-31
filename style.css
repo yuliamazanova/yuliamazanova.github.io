@@ -53,22 +53,30 @@
 }
 
 .ingredients {
+    padding: 5px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 18px;
+    font-size: 16px;
     background-color:#95c476;
-    border-radius: 10px;    
+    border-radius: 10px;   
 }
 
 .ingredients ul {
     list-style-type: none;
 }
 
+.ingredients span {
+    font-family: 'Water Brush';
+    font-size: 24px;
+    font-weight: bold;
+}
+
 .ingredients p {
     font-family: 'Water Brush';
-    font-size: 32px;
+    font-size: 24px;
     font-weight: bold;
+
 }
 
 .nutrivalues {
